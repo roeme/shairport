@@ -215,7 +215,7 @@ int hairtunes_init(char *pAeskey, char *pAesiv, char *fmtpstr, int pCtrlPort, in
             if (debug)
                 fprintf(stderr, "VOL: %lf\n", f);
             volume = pow(10.0,0.05*f);
-            fix_volume = 65536.0 * volume;
+            fix_volume = 256.0 * volume;
             continue;
         }
         if (!strcmp(line, "exit\n")) {
